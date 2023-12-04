@@ -6,7 +6,7 @@
  */
 int is_palindrome(listint_t **head)
 {
-        listint_t *current = *head;
+	listint_t *current = *head;
         int i, tally;
         int arrayList[2048];
 
