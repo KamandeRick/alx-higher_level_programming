@@ -14,8 +14,8 @@ def roman_to_int(roman_string):
         total = 0
         keyLast = 0
         keyCurrent = 0
-        for symbol in roman_string:
-            keyCurrent = romDict.get(symbol, 0)
+        for romSymbol in roman_string:
+            keyCurrent = romDict.get(romSymbol, 0)
             if keyLast != 0 and keyLast >= keyCurrent:
                 total += keyCurrent
             elif keyLast != 0 and keyLast < keyCurrent:
