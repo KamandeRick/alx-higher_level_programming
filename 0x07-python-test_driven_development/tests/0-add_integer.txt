@@ -28,22 +28,22 @@ usage with only positiona argument a as float
 >>> add_integer("julien")
 Traceback (most recent call last):
 ...
-TypeError: a must be an add_integer
+TypeError: a must be an integer
 
 #argument a as list(applies for tuple and dictionary as well)
 >>> add_integer([a])
 Traceback (most recent call last):
 ...
-TypeError: a must be an integer
+NameError: name 'a' is not defined
 
 #argument b as string
 >>> add_integer(2, "julien")
 Traceback (most recent call last):
 ...
-TypeError: b must be an add_integer
+TypeError: b must be an integer
 
 #argument b as list(applies for tuple and dictionary as well)
 >>> add_integer(2, [b])
 Traceback (most recent call last):
 ...
-TypeError: b must be an integer
+NameError: name 'b' is not defined
