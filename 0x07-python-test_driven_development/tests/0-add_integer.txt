@@ -47,3 +47,4 @@ TypeError: b must be an integer
 Traceback (most recent call last):
 ...
 NameError: name 'b' is not defined
+
