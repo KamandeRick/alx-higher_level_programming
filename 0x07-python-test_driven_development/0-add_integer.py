@@ -3,6 +3,7 @@
 """
 Module defining a function that takes 2 arguments
 returns the sum of the 2 arguments
+a + b
 """
 
 
