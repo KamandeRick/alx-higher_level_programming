@@ -48,3 +48,8 @@ Traceback (most recent call last):
 ...
 NameError: name 'b' is not defined
 
+#No arguments passed
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
