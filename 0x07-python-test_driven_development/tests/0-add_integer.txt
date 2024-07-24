@@ -2,9 +2,48 @@ The ''0-add_integer'' module
 =============================
 
 Using ''add_integer''
----------------------
+_____________________
 
-This is a doctest file in txt format
-first import the ''add_integer'' function from the 0-add_integer module:
+importing the ''add_integer'' function from the 0-add_integer module:
+>>> add_integer = __import__('0-add_integer').add_integer
 
-    >>> add_integer = __import__('0-add_integer').add_integer
+usage with int a and int b
+>>> add_integer(2, 37)
+39
+
+usage with float a and float b
+>>> add_integer(2.0, 37.0)
+39
+
+usage with only positional argumant a as int
+>>> add_integer(2)
+100
+
+usage with only positiona argument a as float
+>>> add_integer(.2)
+98
+
+"""Errors"""
+#argument a as string
+>>> add_integer("julien")
+Traceback (most recent call last):
+...
+TypeError: a must be an add_integer
+
+#argument a as list(applies for tuple and dictionary as well)
+>>> add_integer([a])
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+#argument b as string
+>>> add_integer(2, "julien")
+Traceback (most recent call last):
+...
+TypeError: b must be an add_integer
+
+#argument b as list(applies for tuple and dictionary as well)
+>>> add_integer(2, [b])
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
