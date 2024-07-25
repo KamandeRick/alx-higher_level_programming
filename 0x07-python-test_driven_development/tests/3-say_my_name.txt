@@ -1,0 +1,48 @@
+The ''say_my_name'' module
+==========================
+
+using ''say_my_name''
+-----------------------
+
+#importing
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+#correst usage with strings for both arguments
+>>> say_my_name("walter","white")
+My name is Walter White
+
+#usage with only first argument passed
+>>> say_my_name("Walter")
+My name is Walter 
+
+#usage with empty string passed for first_name argument
+>>> say_my_name("", "white")
+My name is  White
+
+#usage with incorrect type int passed for first_name argument
+>>> say_my_name(1, 'white')
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+#usage with 2 empty strings passed 
+>>> say_my_name("", "")
+My name is  
+
+#usage with 1 empty string passed 
+>>> say_my_name("")
+My name is  
+
+#usage with no arguments passed
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+#usage with type None for last_name
+>>> say_my_name("Walter", None)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+#usage with type none for first_name passed
+>>> say_my_name(None, "white")
+Traceback (most recent call last):
+TypeError: first_name must be a string
