@@ -1,0 +1,55 @@
+The ''matrix_divided'' module
+=============================
+
+Using ''matrix_divided''
+------------------------
+
+#importing
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+#Correct usage, with list of lists(matrix) and divisor as int passed
+>>> matrix_divided([[1,2,3],[4,5,6]], 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+#usage with invalid matrix arg type string instead of matrix
+>>> matrix_divided("julien", 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+#usage with invalid div arg type string instead of int
+>>> matrix_divided([[1,2,3],[4,5,6]], "3")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+#usage with valid matrix but invalid matrix element
+>>> matrix_divided([["1",2,3],[4,5,6]], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+#usage with no div argument passed
+>>> matrix_divided([["1",2,3],[4,5,6]])
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+#usage with 0(zero) divisor passed
+>>> matrix_divided([[1,2,3],[4,5,6]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+#usage with different size row elements of the matrix passed
+>>> matrix_divided([[1,2,3],[4,5,]], 3)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+#usage with no arguments passed 
+>>> matrix_divided()
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+#Usage with negative divisor passed
+>>> matrix_divided([[5, 4], [8, 9]], -2)
+[[-2.5, -2.0], [-4.0, -4.5]]
+
+#Usage with div type infinity passed 
+>>> matrix_divided([[2, 3], [4, 5]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
